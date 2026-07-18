@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kurnaval de Rio — IMT Mines Alès</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;1,9..144,500&family=Work+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg-void:#0A1E14;
+    --bg-panel:#0F2A1C;
+    --gold:#E8C13C;
+    --magenta:#5FA85E;
+    --cream:#F3EEE2;
+    --muted:#8FAE93;
+    --line: rgba(232,193,60,0.28);
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html,body{
+    background:var(--bg-void);
+    color:var(--cream);
+    font-family:'Work Sans', sans-serif;
+    overflow-x:hidden;
+  }
+  body{
+    min-height:100vh;
+    min-height:100dvh;
+    background-image:
+      radial-gradient(ellipse 900px 500px at 15% -10%, rgba(95,168,94,0.18), transparent 60%),
+      radial-gradient(ellipse 700px 500px at 100% 10%, rgba(232,193,60,0.14), transparent 60%);
+  }
+  .stage{
+    position:relative;
+    min-height:100vh;
+    min-height:100dvh;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    padding: 32px 24px;
+    text-align:center;
+  }
+  .fronds{
+    position:absolute;
+    inset:0;
+    pointer-events:none;
+    opacity:0.9;
+  }
+  .eyebrow{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px;
+    letter-spacing:0.28em;
+    text-transform:uppercase;
+    color:var(--gold);
+    margin-bottom:22px;
+    animation: fadeUp 0.9s ease both;
+  }
+  h1{
+    font-family:'Fraunces', serif;
+    font-weight:600;
+    font-size:clamp(3.2rem, 11vw, 8.5rem);
+    line-height:0.92;
+    letter-spacing:-0.01em;
+    color:var(--cream);
+    animation: fadeUp 1s ease 0.1s both;
+  }
+  h1 em{
+    font-style:italic;
+    font-weight:500;
+    color:var(--magenta);
+  }
+  .subtitle{
+    max-width:520px;
+    margin:28px auto 0;
+    font-size:16px;
+    line-height:1.6;
+    color:var(--muted);
+    animation: fadeUp 1s ease 0.2s both;
+  }
+  .divider{
+    width:64px;
+    height:1px;
+    background:var(--gold);
+    margin:40px auto;
+    animation: growLine 1.2s ease 0.4s both;
+  }
+  .cta{
+    display:inline-flex;
+    align-items:center;
+    gap:12px;
+    background:var(--gold);
+    color:var(--bg-void);
+    font-family:'Work Sans', sans-serif;
+    font-weight:600;
+    font-size:15px;
+    letter-spacing:0.01em;
+    padding:16px 30px;
+    border-radius:2px;
+    text-decoration:none;
+    border:1px solid var(--gold);
+    transition: all 0.25s ease;
+    animation: fadeUp 1s ease 0.3s both;
+  }
+  .cta:hover{
+    background:transparent;
+    color:var(--gold);
+  }
+  .cta svg{width:16px; height:16px; transition: transform 0.25s ease;}
+  .cta:hover svg{transform:translateY(2px);}
+
+  @keyframes fadeUp{
+    from{opacity:0; transform:translateY(14px);}
+    to{opacity:1; transform:translateY(0);}
+  }
+  @keyframes growLine{
+    from{width:0;}
+    to{width:64px;}
+  }
+  @media (prefers-reduced-motion: reduce){
+    *{animation:none !important; transition:none !important;}
+  }
+  @media (max-width:520px){
+    h1{ font-size: clamp(2.6rem, 15vw, 4.2rem); }
+    .subtitle{ font-size:14.5px; }
+    .cta{ padding:14px 22px; font-size:14px; }
+    .eyebrow{ font-size:10.5px; letter-spacing:0.2em; }
+  }
+</style>
+</head>
+<body>
+
+<div class="stage">
+  <svg class="fronds" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice">
+    <g stroke="#D4A24C" stroke-width="1" fill="none" opacity="0.35">
+      <path d="M -50 60 Q 250 -40 600 40 Q 950 120 1250 20"/>
+      <path d="M -50 100 Q 250 10 600 90 Q 950 160 1250 70"/>
+    </g>
+    <g stroke="#C23B62" stroke-width="1" fill="none" opacity="0.22">
+      <path d="M -50 740 Q 300 850 650 760 Q 1000 680 1250 780"/>
+    </g>
+    <g stroke="#D4A24C" stroke-width="0.75" fill="none" opacity="0.5">
+      <path d="M 600 130 C 560 90, 540 40, 600 10" />
+      <path d="M 600 130 C 640 90, 660 40, 600 10" />
+      <path d="M 600 130 C 585 80, 590 30, 610 0" />
+      <path d="M 600 130 C 615 80, 610 30, 590 0" />
+    </g>
+  </svg>
+
+  <p class="eyebrow">IMT Mines Alès — Intégration 2025 / 2026</p>
+  <h1>Kurnaval<br><em>de Rio</em></h1>
+  <p class="subtitle">Le livret d'accueil pour tout savoir sur l'intégration en première année, en un seul PDF.</p>
+  <div class="divider"></div>
+
+  <a class="cta" href="https://raw.githubusercontent.com/rptthomas/Livretdaccueil/main/LivretdaccueilIMTAles.pdf" download>
+    Télécharger le livret d'accueil
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+  </a>
+</div>
+
+</body>
+</html>
